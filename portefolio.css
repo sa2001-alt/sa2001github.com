@@ -1,0 +1,232 @@
+
+body {
+    background-color:#FADADD ;
+    font-family: Graphik,sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #800020;
+    color: #fff;
+    padding: 1rem;
+}
+#accueil img {
+    max-width: 500px; /* Ajustez cette valeur selon vos préférences */
+    max-height: 500px; /* Ajustez cette valeur selon vos préférences */
+    width: auto;
+    height: auto;
+    object-fit: cover; /* Assure que l'image couvre bien l'espace défini */
+    animation: fadeInUp 1s ease-out 1.5s;
+    animation-fill-mode: both;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h1,  {
+    color:black;
+}
+h2{color: #800020}
+
+.projet {
+    margin-bottom: 2rem;
+}
+
+.projet img {
+    width:30%;
+    height: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea, button {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+footer {
+    background-color: #800020;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-weight:bold ;
+}
+
+.social-links a {
+    color: Black;
+    margin-right: 10px;
+    text-decoration:nowrap
+
+    .projet {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.images-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.images-container img {
+    width: calc(20% - 8px); /* Ajuste la largeur pour 5 images */
+    height: 120px; /* Hauteur fixe pour toutes les images */
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    animation: fadeInUp 1s ease-out;
+    animation-fill-mode: both;
+    flex-shrink: 0; /* Empêche les images de rétrécir */
+}
+
+.images-container img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    animation: slideInFromLeft 1s ease-out;
+}
+
+/* Animation séquentielle pour chaque image */
+.images-container img:nth-child(1) { animation-delay: 0.2s; }
+.images-container img:nth-child(2) { animation-delay: 0.4s; }
+.images-container img:nth-child(3) { animation-delay: 0.6s; }
+.images-container img:nth-child(4) { animation-delay: 0.8s; }
+.images-container img:nth-child(5) { animation-delay: 1s; }
+
+/* Styles pour les écrans plus petits */
+@media (max-width: 768px) {
+    .images-container {
+        flex-wrap: nowrap; /* Empêche le retour à la ligne */
+    }
+
+    .images-container img {
+        width: 150px; /* Largeur fixe pour les petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+    .images-container img {
+        width: 120px; /* Largeur réduite pour les très petits écrans */
+    }
+}
+
+}
+
+#accueil .welcome-text {
+    animation: fadeInUp 1s ease-out;
+}
+
+#accueil h1 {
+    animation: fadeInUp 1s ease-out 0.5s;
+    animation-fill-mode: both;
+}
+
+#accueil p {
+    animation: fadeInUp 1s ease-out 1s;
+    animation-fill-mode: both;
+}
+
+#accueil img {
+    animation: fadeInUp 1s ease-out 1.5s;
+    animation-fill-mode: both;
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible section {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@keyframes growBar {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+
+nav ul li a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
